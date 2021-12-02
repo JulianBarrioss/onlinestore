@@ -17,7 +17,7 @@ async function sendMail() {
   let info = await transporter.sendMail({
     from: '', // sender address
     to: "", // list of receivers
-    subject: "this is a new one", // Subject line
+    subject: "this is a new mail", // Subject line
     text: "Hello world :D", // plain text body
     html: "<b>Hello world :D</b>", // html body
   });
