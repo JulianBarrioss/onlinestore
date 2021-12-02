@@ -4,22 +4,22 @@ const nodemailer = require("nodemailer");
 async function sendMail() {
 
     let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
-    secure: false, // true for 465, false for other ports
-    port: 587,
+    host: "smtp.gmail.com",
+    secure: true, // true for 465, false for other ports
+    port: 465,
     auth: {
-        user: 'pierce.windler54@ethereal.email',
-        pass: 'R3MxmNm59wZUEsthJY'
+        user: '',
+        pass: ''
     }
   });
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: 'pierce.windler54@ethereal.email', // sender address
-    to: "pierce.windler54@ethereal.email", // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>", // html body
+    from: '', // sender address
+    to: "", // list of receivers
+    subject: "this is a new one", // Subject line
+    text: "Hello world :D", // plain text body
+    html: "<b>Hello world :D</b>", // html body
   });
 
   console.log("Message sent: %s", info.messageId);
